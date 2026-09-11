@@ -14,6 +14,6 @@ public class Main {
         arr.add(7);
         arr.add(0);
 
-        IO.println(Lab1.removeElementInplace(arr, 0));
+        IO.println(Lab1.removeElementInplace(arr, 1));
     }
 }

@@ -33,7 +33,11 @@ public class Lab1 {
 
     // Функция второго задания
     public static int removeElementInplace(List<Integer> arr, int val) {
-        arr.removeIf(Predicate.isEqual(val));
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i) == val) {
+                arr.remove(i);
+            }
+        }
         return arr.size();
     }
 }
