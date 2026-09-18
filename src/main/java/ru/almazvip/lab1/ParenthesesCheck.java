@@ -2,7 +2,7 @@ package ru.almazvip.lab1;
 
 import java.util.Stack;
 
-public class FirstSolution {
+public class FirstTask {
     public static boolean isValidParentheses(String data) {
         if (data == null) { throw new NullPointerException(); }
 

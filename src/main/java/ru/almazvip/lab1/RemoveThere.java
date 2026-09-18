@@ -1,6 +1,6 @@
 package ru.almazvip.lab1;
 
-public class SecondSolution {
+public class SecondTask {
     public static int removeElementInplace(int[] arr, int val) {
         if (arr == null) { throw new NullPointerException(); }
 

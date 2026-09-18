@@ -3,12 +3,12 @@ package ru.almazvip.lab1;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SecondSolutionTest {
+public class SecondTaskTest {
     @Test
-    public void secondSolution_mixedElements() {
+    public void secondTask_mixedElements() {
         int[] arr = {3, 2, 2, 3};
         int val = 3;
-        int newLength = SecondSolution.removeElementInplace(arr, val);
+        int newLength = SecondTask.removeElementInplace(arr, val);
 
         assertEquals(2, newLength, "Длина должна быть 2");
 
@@ -17,19 +17,19 @@ public class SecondSolutionTest {
     }
 
     @Test
-    public void secondSolution_allElementsAreVal() {
+    public void secondTask_allElementsAreVal() {
         int[] arr = {2, 2, 2, 2};
         int val = 2;
-        int newLength = SecondSolution.removeElementInplace(arr, val);
+        int newLength = SecondTask.removeElementInplace(arr, val);
 
         assertEquals(0, newLength, "Если все элементы удалены, длина должна быть 0");
     }
 
     @Test
-    public void secondSolution_noElementsAreVal() {
+    public void secondTask_noElementsAreVal() {
         int[] arr = {1, 4, 5, 6};
         int val = 99;
-        int newLength = SecondSolution.removeElementInplace(arr, val);
+        int newLength = SecondTask.removeElementInplace(arr, val);
 
         assertEquals(4, newLength, "Длина не должна измениться");
 
@@ -40,19 +40,19 @@ public class SecondSolutionTest {
     }
 
     @Test
-    public void secondSolution_emptyArray() {
+    public void secondTask_emptyArray() {
         int[] arr = {};
         int val = 1;
-        int newLength = SecondSolution.removeElementInplace(arr, val);
+        int newLength = SecondTask.removeElementInplace(arr, val);
 
         assertEquals(0, newLength, "Для пустого массива длина всегда 0");
     }
 
     @Test
-    public void secondSolution_orderUnchanged() {
+    public void secondTask_orderUnchanged() {
         int[] arr = {0, 1, 2, 2, 3, 0, 4, 2};
         int val = 2;
-        int newLength = SecondSolution.removeElementInplace(arr, val);
+        int newLength = SecondTask.removeElementInplace(arr, val);
 
         assertEquals(5, newLength);
 
@@ -63,11 +63,11 @@ public class SecondSolutionTest {
     }
 
     @Test
-    public void secondSolution_nullArrayInput() {
+    public void secondTask_nullArrayInput() {
         int val = 13;
 
         assertThrows(NullPointerException.class, () -> {
-            SecondSolution.removeElementInplace(null, val);
+            SecondTask.removeElementInplace(null, val);
         }, "Передача null должна вызывать NullPointerException");
     }
 }
