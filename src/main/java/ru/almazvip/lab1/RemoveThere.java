@@ -6,14 +6,11 @@ import java.util.List;
 
 public class RemoveThere {
     public static int removeElementInplace(List<Integer> arr, int val) {
-        if (arr == null) {
-            throw new NullPointerException();
-        }
+        var iter = arr.iterator();
 
-        for (int i = 0; i < arr.size(); i++) {
-            if (arr.get(i) == val) {
-                arr.remove(i);
-                i--;
+        while (iter.hasNext()) {
+            if (iter.next() == val) {
+                iter.remove();
             }
         }
 

@@ -6,7 +6,9 @@ import java.util.Stack;
 
 public class ParenthesesCheck {
     public static boolean isValidParentheses(String data) {
-        if (data == null) { throw new NullPointerException(); }
+        if (data == null) {
+            throw new NullPointerException();
+        }
 
         var chars = new Stack<Character>();
 
