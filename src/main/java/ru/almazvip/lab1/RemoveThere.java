@@ -6,12 +6,20 @@ import java.util.List;
 
 public class RemoveThere {
     public static int removeElementInplace(List<Integer> arr, int val) {
-        var iter = arr.iterator();
+        int insert = 0;
+        int toRemove = 0;
 
-        while (iter.hasNext()) {
-            if (iter.next() == val) {
-                iter.remove();
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i) != val) {
+                arr.set(insert, arr.get(i));
+                insert++;
+            } else {
+                toRemove++;
             }
+        }
+
+        for (int i = 0; i < toRemove; i++) {
+            arr.removeLast();
         }
 
         return arr.size();
