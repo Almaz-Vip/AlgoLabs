@@ -1,17 +1,22 @@
 package ru.almazvip.lab1;
 
-public class SecondTask {
-    public static int removeElementInplace(int[] arr, int val) {
-        if (arr == null) { throw new NullPointerException(); }
+// Задание 1.2
 
-        int insert = 0;
+import java.util.List;
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != val) {
-                arr[insert] = arr[i];
-                insert++;
+public class RemoveThere {
+    public static int removeElementInplace(List<Integer> arr, int val) {
+        if (arr == null) {
+            throw new NullPointerException();
+        }
+
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i) == val) {
+                arr.remove(i);
+                i--;
             }
         }
-        return insert;
+
+        return arr.size();
     }
 }

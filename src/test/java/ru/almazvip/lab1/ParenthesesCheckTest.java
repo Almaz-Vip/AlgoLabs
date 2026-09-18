@@ -3,54 +3,54 @@ package ru.almazvip.lab1;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class FirstTaskTest {
+public class ParenthesesCheckTest {
     @Test
-    public void firstTask_testEmptyString() {
-        assertTrue(FirstTask.isValidParentheses(""), "Пустая строка должна быть валидной");
+    public void parenthesesCheck_testEmptyString() {
+        assertTrue(ParenthesesCheck.isValidParentheses(""), "Пустая строка должна быть валидной");
     }
 
     @Test
-    public void firstTask_testSimpleValidPairs() {
-        assertTrue(FirstTask.isValidParentheses("()"), "Обычные круглые скобки");
-        assertTrue(FirstTask.isValidParentheses("[]"), "Обычные квадратные скобки");
-        assertTrue(FirstTask.isValidParentheses("{}"), "Обычные фигурные скобки");
+    public void parenthesesCheck_testSimpleValidPairs() {
+        assertTrue(ParenthesesCheck.isValidParentheses("()"), "Обычные круглые скобки");
+        assertTrue(ParenthesesCheck.isValidParentheses("[]"), "Обычные квадратные скобки");
+        assertTrue(ParenthesesCheck.isValidParentheses("{}"), "Обычные фигурные скобки");
     }
 
     @Test
-    public void firstTask_testSequentialValidPairs() {
-        assertTrue(FirstTask.isValidParentheses("()[]{}"), "Последовательные валидные скобки");
+    public void parenthesesCheck_testSequentialValidPairs() {
+        assertTrue(ParenthesesCheck.isValidParentheses("()[]{}"), "Последовательные валидные скобки");
     }
 
     @Test
-    public void firstTask_testNestedValidPairs() {
-        assertTrue(FirstTask.isValidParentheses("{[()]}"), "Правильно вложенные скобки");
-        assertTrue(FirstTask.isValidParentheses("((()))"), "Множественная вложенность одного типа");
+    public void parenthesesCheck_testNestedValidPairs() {
+        assertTrue(ParenthesesCheck.isValidParentheses("{[()]}"), "Правильно вложенные скобки");
+        assertTrue(ParenthesesCheck.isValidParentheses("((()))"), "Множественная вложенность одного типа");
     }
 
     @Test
-    public void firstTask_testMismatchedPairs() {
-        assertFalse(FirstTask.isValidParentheses("(]"), "Несовпадающий тип скобок");
-        assertFalse(FirstTask.isValidParentheses("([)]"), "Пересекающиеся скобки разного типа");
+    public void parenthesesCheck_testMismatchedPairs() {
+        assertFalse(ParenthesesCheck.isValidParentheses("(]"), "Несовпадающий тип скобок");
+        assertFalse(ParenthesesCheck.isValidParentheses("([)]"), "Пересекающиеся скобки разного типа");
     }
 
     @Test
-    public void firstTask_testMissingOpenBracket() {
-        assertFalse(FirstTask.isValidParentheses("]"), "Только закрывающая скобка");
-        assertFalse(FirstTask.isValidParentheses("())"), "Лишняя закрывающая скобка в конце");
-        assertFalse(FirstTask.isValidParentheses("}[]()"), "Лишняя закрывающая скобка в начале");
+    public void parenthesesCheck_testMissingOpenBracket() {
+        assertFalse(ParenthesesCheck.isValidParentheses("]"), "Только закрывающая скобка");
+        assertFalse(ParenthesesCheck.isValidParentheses("())"), "Лишняя закрывающая скобка в конце");
+        assertFalse(ParenthesesCheck.isValidParentheses("}[]()"), "Лишняя закрывающая скобка в начале");
     }
 
     @Test
-    public void firstTask_testMissingCloseBracket() {
-        assertFalse(FirstTask.isValidParentheses("["), "Только открывающая скобка");
-        assertFalse(FirstTask.isValidParentheses("(()"), "Лишняя открывающая скобка");
-        assertFalse(FirstTask.isValidParentheses("{[]()"), "Отсутствует закрывающая для первой скобки");
+    public void parenthesesCheck_testMissingCloseBracket() {
+        assertFalse(ParenthesesCheck.isValidParentheses("["), "Только открывающая скобка");
+        assertFalse(ParenthesesCheck.isValidParentheses("(()"), "Лишняя открывающая скобка");
+        assertFalse(ParenthesesCheck.isValidParentheses("{[]()"), "Отсутствует закрывающая для первой скобки");
     }
 
     @Test
-    public void firstTask_testNullInput() {
+    public void parenthesesCheck_testNullInput() {
         assertThrows(NullPointerException.class, () -> {
-            FirstTask.isValidParentheses(null);
+            ParenthesesCheck.isValidParentheses(null);
         }, "Передача null должна вызывать NullPointerException");
     }
 }
