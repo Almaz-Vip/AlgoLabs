@@ -7,6 +7,6 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        IO.println("Питон > Java");
+        IO.println("Python > Java");
     }
 }
