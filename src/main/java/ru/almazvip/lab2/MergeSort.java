@@ -2,7 +2,6 @@ package ru.almazvip.lab2;
 
 import ru.almazvip.Sorting;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MergeSort implements Sorting<Integer> {
