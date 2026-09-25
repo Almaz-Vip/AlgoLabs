@@ -1,8 +1,8 @@
 package ru.almazvip.lab1;
 
-// Задание 1.2
-
 import java.util.List;
+
+// Задание 1.2
 
 public class RemoveThere {
     public static int removeElementInplace(List<Integer> arr, int val) {
@@ -15,6 +15,6 @@ public class RemoveThere {
             }
         }
 
-        return arr.size();
+        return insert;
     }
 }
