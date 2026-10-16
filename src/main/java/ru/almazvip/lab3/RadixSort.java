@@ -28,7 +28,7 @@ public class RadixSort implements Sorting<BigInteger> {
         }
 
         for (BigInteger num : nums) {
-            int digit = num.divide(exponent).mod(BigInteger.TEN).intValue(); // digit = (num / exponent) % 10                                                                                                                                     Пися попа
+            int digit = num.divide(exponent).mod(BigInteger.TEN).intValue();
             buckets.get(digit).add(num);
         }
 
