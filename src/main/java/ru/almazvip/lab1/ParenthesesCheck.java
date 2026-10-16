@@ -1,12 +1,13 @@
 package ru.almazvip.lab1;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
 
 // Задание 1.1
 
+
 public class ParenthesesCheck {
     public static boolean isValidParentheses(String data) {
-        var chars = new Stack<Character>();
+        var chars = new ArrayDeque<Character>();
 
         for (int i = 0; i < data.length(); i++) {
             char current = data.charAt(i);

@@ -5,9 +5,6 @@ import ru.almazvip.Sorting;
 import java.util.ArrayList;
 import java.util.List;
 
-// Ошибки Stack overflow для 2к элементов в диапазон -2млрд до +2млрд
-// Какой-то базовый случай не обработан
-
 public class MergeSort implements Sorting<Integer> {
     @Override
     public void sort(List<Integer> nums) {
