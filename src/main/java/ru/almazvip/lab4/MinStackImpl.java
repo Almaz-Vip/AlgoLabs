@@ -1,7 +1,7 @@
 package ru.almazvip.lab4;
 
 public class MinStackImpl implements MinStack<Integer> {
-    private Node head = null;
+    private StackLinkedList head = null;
 
     @Override
     public void push(Integer value) {
@@ -13,7 +13,7 @@ public class MinStackImpl implements MinStack<Integer> {
             min = Math.min(head.min, value);
         }
 
-        head = new Node(value, min, head);
+        head = new StackLinkedList(value, min, head);
     }
 
     @Override
