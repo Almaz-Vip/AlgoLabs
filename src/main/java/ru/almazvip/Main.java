@@ -1,16 +1,15 @@
 package ru.almazvip;
 
-import ru.almazvip.lab2.InsertionSort;
-import ru.almazvip.lab2.MergeSort;
+import ru.almazvip.lab8.PrefixSums;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Random;
 
 public class Main {
-    public static void main(String[] args) {
+    static void main(String[] args) {
+        List<Integer> sums = new ArrayList<>(List.of(1, 4, 3, -6, 2, 6, -8, 2, 3, 5));
+        PrefixSums prefixSums = new PrefixSums(sums);
 
+        System.out.println(prefixSums.sum(4, 4));
     }
 }
-
