@@ -2,13 +2,6 @@ package ru.almazvip.lab4;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import ru.almazvip.lab3.CountingSort;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MinStackImplTest {
     @Test
