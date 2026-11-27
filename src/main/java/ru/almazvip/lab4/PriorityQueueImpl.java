@@ -55,7 +55,7 @@ public class PriorityQueueImpl implements PriorityQueue<Integer> {
             return null;
         }
 
-        HeapNode maxNode = heap.getFirst();
+        HeapNode maxNode = heap.get(0);
         int last = heap.size() - 1;
         HeapNode lastNode = heap.get(last);
 
